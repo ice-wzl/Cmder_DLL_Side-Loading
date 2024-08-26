@@ -1,12 +1,12 @@
-# Cmder DLL Side-Loading v1.3.25 (Full and Mini)
+# Cmder DLL Side-Loading v1.3.25 (Full and Mini Versions)
 According to https://cmder.app/ it is:
 ````
 Cmder is a software package created out of pure frustration over the absence of nice
 console emulators on Windows. It is based on amazing software, and spiced up with
 the Monokai color scheme and a custom prompt layout, looking sexy from the start.
 ````
-I couldnt agree more, it is a great application and I use it on all my Windows systems.
-This repo details an issue in the Cmder application (Full and Mini) in which a DLL is seached for and not found allowing an attacker the ability to get code execution
+- I couldnt agree more, it is a great application and I use it on all my Windows systems.
+- This repo details an issue in the Cmder application (Full and Mini Versions) in which a DLL is seached for and not found allowing an attacker the ability to get code execution
 
 ## Application Link
 - https://cmder.app/
